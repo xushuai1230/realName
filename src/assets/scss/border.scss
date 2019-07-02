@@ -1,0 +1,114 @@
+@mixin setLine($c: #e5e5e5) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 1px;
+  border: 1px solid $c;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+@mixin setTopLine($c: #e5e5e5) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid $c;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+@mixin setBottomLine($c: #e5e5e5) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid $c;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+@mixin setLeftLine($c: #e5e5e5) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid $c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+
+@mixin setRightLine($c: #e5e5e5) {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid $c;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
+.b1,
+.bt1,
+.bb1,
+.btb1,
+.bl1,
+.br1 {
+  position: relative;
+}
+
+.b1 {
+  &:before {
+      @include setLine();
+  }
+}
+
+.bt1 {
+  &:before {
+    @include setTopLine();
+  }
+}
+
+.bb1 {
+  &:after {
+    @include setBottomLine();
+  }
+}
+
+.btb1 {
+  &:before {
+    @include setTopLine();
+  }
+  &:after {
+    @include setBottomLine();
+  }
+}
+
+.bl1 {
+  &:before {
+    @include setLeftLine();
+  }
+}
+
+.br1 {
+  &:after {
+    @include setRightLine();
+  }
+}
+
+.blr1 {
+  &:before {
+    @include setLeftLine();
+  }
+  &:after {
+    @include setRightLine();
+  }
+}

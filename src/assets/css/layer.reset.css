@@ -1,0 +1,25 @@
+  /* lyaer 弹窗样式 重置 */
+  .layui-m-layer0 .layui-m-layerchild {
+    width: 72%;
+    border-radius: .266667rem;
+    font-size: .453333rem;
+  }
+  .layui-m-layercont {
+    padding: .86rem .4rem;
+  }
+  .layui-m-layerbtn {
+    background-color: #fff;
+    color: #0076ff;
+    border-bottom-left-radius: .266667rem;
+    border-bottom-right-radius: .266667rem;
+    border-color: #e5e5e5;
+    font-size: .453333rem;
+    height: 1.066667rem;
+    line-height: 1.066667rem;
+  }
+  .layui-m-layerbtn span[no] {
+    border-color: #e5e5e5;
+  }
+  .layui-m-layerbtn span[yes] {
+    color: inherit;
+  }
